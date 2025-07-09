@@ -1,26 +1,22 @@
-<h1 align="center">🔒 chgpass</h1>
+# 🔒 chgpass
 
-<p align="center">
-  تغییر سریع پسورد کاربر به مقدار دلخواه یا رمز تصادفی
-  <br>
-  Change user password quickly via CLI (manual or random)
-  <br>
-  Changer le mot de passe utilisateur facilement (manuel ou aléatoire)
-</p>
+A simple CLI tool to change a user’s password to a specified value or to a securely generated random string.  
+<p dir="rtl">ابزاری خط فرمان ساده برای تغییر پسورد کاربر به مقدار دلخواه یا تصادفی امن</p>  
+Un outil en ligne de commande simple pour changer le mot de passe d’un utilisateur en une valeur choisie ou aléatoire.
 
 ---
 
-## 📦 ویژگی‌ها | Features | Fonctionnalités
+## 🇬🇧 English
 
-- ✅ تغییر پسورد کاربر فعلی (SUDO_USER یا خودکار)
-- 🔐 تولید رمز عبور تصادفی ایمن (base64 یا urandom)
-- ⚡ اجرا با یک دستور ساده در ترمینال
-- 🌐 چندزبانه و قابل نصب در `PATH`
-- 📜 بدون ذخیره رمز عبور؛ فقط نمایش در خروجی
+### 🚀 Features
 
----
+- Change the target user’s password to a provided value  
+- Generate a secure 16-character random password (via `openssl` or `/dev/urandom`)  
+- Single–command usage: `sudo chgpass [NEW_PASSWORD]`  
+- No password stored on disk—only printed to stdout  
+- Installs into your `PATH` as a standalone executable  
 
-## 🛠 نصب | Installation | Installation
+### 🛠 Installation
 
 ```bash
 git clone https://github.com/rzadrbi/chgpass.git
