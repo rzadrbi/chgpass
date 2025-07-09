@@ -117,8 +117,6 @@ sudo chgpass
 - <p dir="rtl">مجوز فایل 700: فقط root می‌تواند اجرا یا خواند.</p>  
 - <p dir="rtl">رمزها تنها در خروجی نمایش داده می‌شوند، ذخیره نمی‌شوند.</p>  
 
-### مشارکت  
-<p dir="rtl">Issues، پیشنهادها و Pull Requestها خوش‌آمد هستند!</p>  
 ```bash
 # Fork → Clone → Edit → Commit → PR
 ```
