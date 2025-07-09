@@ -33,19 +33,20 @@ sudo chgpass MySecret#123
 # 2) Generate & display a random password
 ```
 sudo chgpass
-```
+
 # ✔ reza password changed to random value:
 #   Ab3kL9xPq2Tz7YwR
+```
 
 
 📁 Repository Structure
-
+```
 chgpass/
 ├── bin/
 │   └── chgpass      ← the executable script
 ├── README.md        ← this document
 └── LICENSE          ← MIT license
-
+```
 🔐 Security
 
 📣 Contributing
