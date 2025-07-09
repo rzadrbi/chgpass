@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#
+# chgpass — تغییر پسورد کاربر به مقدار دلخواه یا رندوم
+#
+# Usage:
+#   sudo chgpass [NEW_PASSWORD]
+#
+# اگر آرگومان NEW_PASSWORD داده شود، از آن استفاده می‌کند.
+# در غیر این صورت یک پسورد رندوم تولید می‌کند و نمایش می‌دهد.
+
+set -euo pipefail
+
+TARGET_USER=${SUDO_USER:-$(whoami)}
+
+if [[ $EUID -ne 0 ]]; then
+  echo "Error: run with sudo" >&2
+  exit 1
+fi
+
+if [[ $# -ge 1 && -n "${1// }" ]]; then
+  NEWPASS="$1"
+else
+  if command -v openssl &>/dev/null; then
+    NEWPASS=$(openssl rand -base64 12)
+  else
+    NEWPASS=$(tr -dc 'A-Za-z0-9._%+-' </dev/urandom | head -c16)
+  fi
+  RANDOM_OUTPUT=true
+fi
+
+echo "${TARGET_USER}:${NEWPASS}" | chpasswd
+
+if [[ ${RANDOM_OUTPUT:-false} == true ]]; then
+  echo "✔ ${TARGET_USER} password changed to random value:"
+  echo "  $NEWPASS"
+else
+  echo "✔ ${TARGET_USER} password changed to: $NEWPASS"
+fi
