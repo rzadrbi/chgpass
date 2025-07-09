@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 #
-# chgpass — تغییر پسورد کاربر به مقدار دلخواه یا رندوم
 #
 # Usage:
 #   sudo chgpass [NEW_PASSWORD]
-#
-# اگر آرگومان NEW_PASSWORD داده شود، از آن استفاده می‌کند.
-# در غیر این صورت یک پسورد رندوم تولید می‌کند و نمایش می‌دهد.
 
 set -euo pipefail
 
