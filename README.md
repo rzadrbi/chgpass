@@ -1,12 +1,9 @@
 # 🔒 chgpass
 
 A simple CLI tool to change a user’s password to a specified value or to a securely generated random string.  
-<p dir="rtl">ابزاری خط فرمان ساده برای تغییر پسورد کاربر به مقدار دلخواه یا تصادفی امن</p>  
-Un outil en ligne de commande simple pour changer le mot de passe d’un utilisateur en une valeur choisie ou aléatoire.
+
 
 ---
-
-## 🇬🇧 English
 
 ### 🚀 Features
 
@@ -25,4 +22,32 @@ sudo chmod 700 /usr/local/bin/chgpass
 ```
 
 Ensure /usr/local/bin is in your PATH :
-echo $PATH
+```echo $PATH```
+
+💡 Usage
+# 1) Set a custom password
+```
+sudo chgpass MySecret#123
+```
+
+# 2) Generate & display a random password
+```
+sudo chgpass
+```
+# ✔ reza password changed to random value:
+#   Ab3kL9xPq2Tz7YwR
+
+
+📁 Repository Structure
+
+chgpass/
+├── bin/
+│   └── chgpass      ← the executable script
+├── README.md        ← this document
+└── LICENSE          ← MIT license
+
+🔐 Security
+
+📣 Contributing
+Feel free to open issues, submit PRs or improvements!
+
