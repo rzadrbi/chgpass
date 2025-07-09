@@ -22,3 +22,6 @@ Un outil en ligne de commande simple pour changer le mot de passe d’un utilisa
 git clone https://github.com/rzadrbi/chgpass.git
 sudo cp chgpass/bin/chgpass /usr/local/bin/
 sudo chmod 700 /usr/local/bin/chgpass
+
+Ensure /usr/local/bin is in your PATH :
+echo $PATH
